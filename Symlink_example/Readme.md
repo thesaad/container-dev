@@ -4,4 +4,5 @@ To see whether camflow registers write edges when the writes are made using syml
 
 ### How to execute the example
 run `sudo chmod +x my_shell.sh`
+
 run `./my_shell.sh`
