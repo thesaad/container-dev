@@ -12,7 +12,7 @@ This is a mockup example to demonstrate what happens in the CVE-5736-2019. To se
       
 
 ### How to execute the example
-- In the firsl shell, run `./my_file`
+- In the first shell, run `./my_file`
 - In the second shell, run `./overwrite`
 - Go back to the first shell and then press "e" and then hit the enter key.
 - To check if `my_file` was overwritten, run `./my_file` again.
