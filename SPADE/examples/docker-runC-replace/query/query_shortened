@@ -1,0 +1,8 @@
+%destination_constraint = "inode" == '789939'
+$destinations = $base.getVertex(%destination_constraint)
+#%type_constraint = "type" = 'Artifact'
+#$Artifact_vertex = $destinations.getVertex(%type_constraint)
+$lineage = $base.getLineage($destinations, 1, 'b')
+$lineage = $lineage.collapseEdge('operation')
+export > /tmp/runc2.dot
+dump all $lineage
