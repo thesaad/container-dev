@@ -17,13 +17,17 @@ Note: The scripts may require executable access using `chmod +x setup.sh` and `c
 
 ## SPADE Log ##
 
-The file `SPADE_07.22.2021-22.29.10` is a SPADE log file which contains the result of detecting events while spade run.
+The file `SPADE_07.29.2021-22.17.12` is a SPADE log file which contains the result of detecting crossnaespaces events while spade run. The intial list of crossname space events can be printed using:
 
+`grep 'CrossNamespaces event' SPADE_07.29.2021-22.17.12.log | grep "789939"`
 
+This will print all crossnamespace events to inode 789939, this can further be further narrowed down to namespaces of interests. i.e of container and host etc. (Note: namespaces with -1 can be ignored if found)
 ## Audit Log ##
 
 shared in skype channel using commit hash. 
+## query ##
+query directory contains two queries. One with level 1 and one with level 3. The purpose of both queries is expressed in graph section
 
-## DOT Graph ##
+##Graph ##
 
-The file `runc.dot.gz` under `graph` directory is the DOT graph for the program above. This contains a lot of vertices which can be further reduced to targetted only.
+The file `runc.dot.gz` under `graph` directory is the DOT graph for the program above with level 3 to show connections of an inode=789939 which is written by direct and symlink paths. Another graph alongwith svg is uploaded with level, which is disconnected graph of the same inode giving inforation of the file being accessed in different ways.
